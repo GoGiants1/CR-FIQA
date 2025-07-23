@@ -59,7 +59,7 @@ def main(param):
         print("Unknown model")
         exit()
 
-    features = face_model.get_batch_feature(image_path_list)
+    features = face_model.get_batch_feature(image_path_list,  flip=0,color=param.color_channel)
     features_flipped = face_model.get_batch_feature(image_path_list, flip=1,color=param.color_channel)
 
     # too slow for IJBC
